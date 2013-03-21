@@ -34,7 +34,9 @@ group :test do
 	gem 'database_cleaner'
 
 end
-
+group :production do
+  gem 'pg'
+end
 
 # To use Jbuilder templates for JSON
 # gem 'jbuilder'
