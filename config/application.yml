@@ -1,0 +1,7 @@
+secret_token: '1082e27498e42a1ce3030c254cfc8a4371e37dbc7e851006050c0efc8c743e272096a0a060a6326df1d14a1ecfebc59b3f8d3da15d50439741b7cd1e9c0c5931'
+development:
+  host: "localhost:3000"
+test:
+  host: "test.local"
+production:
+  host: "blog.example.com"

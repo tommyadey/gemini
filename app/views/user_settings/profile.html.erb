@@ -1,0 +1,16 @@
+<%= render 'user_settings/includes/settings_header'%>
+<input type="button" value="Choose Photo"/>
+<%= form_tag '', :method => :post do %>
+    <%= label_tag :fullname %>
+    <%= text_field_tag :fullname, params[:fullname] %> <br>
+    <%= label_tag :location %>
+    <%= text_field_tag :location, params[:location] %> <br>
+    <%= label_tag :website %>
+    <%= url_field(:website, params[:website]) %> <br>
+    <%= label_tag :gender %>
+    <%= select_tag(:gender, options_for_select([['Male',1],['Female',2],['Other',3]])) %>
+    <br>
+    <%= label_tag :bio %>
+    <%= text_area_tag(:bio, params[:bio]) %> <br>
+	<%= submit_tag "Save Changes" %>
+<% end %>

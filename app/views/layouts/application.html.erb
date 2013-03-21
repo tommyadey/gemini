@@ -1,0 +1,31 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="description" content="The new social network"/>
+    <meta name="keywords" content="social network,social"/>
+    <link href="" rel="icon"/>
+  <title><%= yield(:title) %></title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+  <!--[if lt IE 9]>
+  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <noscript>
+    <div id="no-jscript"> <?php echo base_url(); ?> Brackt is heavily reliant on the use of Javascript for its usuability. Please enable javascript in your browser for full functionality.
+    </div>
+</noscript>
+
+<div class="container">
+  <%= render 'includes/header'%>
+  <section class="content">
+    <%= render 'includes/common/message_handler'%>
+    <%= yield %>
+  </section><!-- end section !-->
+  <%= render 'includes/footer'%>
+</div><!-- end container !-->
+
+</body>
+</html>

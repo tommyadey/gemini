@@ -1,0 +1,45 @@
+<%= render 'user_settings/includes/settings_header'%>
+<%= form_tag '', :method => :post do %>
+	<p> Notify me for these events:<p>
+	<p>
+    <%= check_box_tag(:add_brackt) %>
+    <%= label_tag(:add_brackt, "When someone adds me to their brackt") %>
+    </p>
+    <p>
+    <%= check_box_tag(:user_replies) %>
+    <%= label_tag(:user_replies, "When someone replies to my content") %>
+    </p>
+    <p>
+    <%= check_box_tag(:user_mentioned) %>
+    <%= label_tag(:user_mentioned, "When i'm mentioned in a post") %>
+    </p>
+    <p>
+    <%= check_box_tag(:user_shared_with) %>
+    <%= label_tag(:user_shared_with, "When content is shared with me") %>
+    </p>
+    <p>
+    <%= check_box_tag(:user_vote) %>
+    <%= label_tag(:user_vote, "When someone votes my content") %>
+    </p>
+    <p>
+    <%= check_box_tag(:user_branch) %>
+    <%= label_tag(:user_branch, "When my content are branched") %>
+    </p>
+    <p>
+    <%= check_box_tag(:user_semi_newsletters) %>
+    <%= label_tag(:user_semi_newsletters, "Updates abouts new contents, features and tips") %>
+    </p>
+    <p>
+    <%= check_box_tag(:user_newsletters) %>
+    <%= label_tag(:user_newsletters, "Trending contents and stories") %>
+    </p>
+    <p>
+    <%= check_box_tag(:user_semi_newsletters) %>
+    <%= label_tag(:user_semi_newsletters, "Updates abouts new contents, features and tips") %>
+    </p>
+    <p>
+    <%= check_box_tag(:user_suggestion) %>
+    <%= label_tag(:user_suggestion, "Suggestions about people i may know") %>
+    </p>
+	<%= submit_tag "Save Changes" %>
+<% end %>

@@ -1,0 +1,14 @@
+<%= render 'user_settings/includes/settings_header'%>
+
+<input type="button" value="Change Password"/>
+<%= form_tag '', :method => :post do %>
+    <%= label_tag :email %>
+    <%= text_field_tag :email, params[:email] %> <br>
+    <%= check_box_tag(:user_display_matured) %>
+    <%= label_tag(:user_display_matured, "Display media that may contain sensitive content") %>
+    <br>
+    <%= check_box_tag(:user_mark_matured) %>
+    <%= label_tag(:user_mark_matured, "Mark my media as containing sensitive content") %>
+    <br>
+	<%= submit_tag "Save Changes" %>
+<% end %>

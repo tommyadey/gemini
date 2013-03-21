@@ -1,0 +1,4 @@
+<p><%= @user.fullname %></p>
+<p>Thank you for signing up.</p>
+Click the URL below to confirm your account
+<%= confirm_url(:confirm => @token.token) %>
