@@ -14,7 +14,7 @@ class SessionsController < ApplicationController
       #redirect_to root_url, :notice => "Signed In"
     else
       flash.now[:error] = 'Invalid email/password combination'
-      render 'new'
+      render 'new', :layout => "signedout_layout"
     end
   end
 

@@ -9,7 +9,7 @@ class UserVerificationToken < ActiveRecord::Base
     before_create { generate_token(:token) }
   	after_create do
   		#Confirm the previous tokens of the same verification type 
-  		UserVerificationToken.update_all 'confirmed = 1', ['user_id = ? and verification_type = ? and id != ?', self.user_id, self.verification_type, self.id ]
+  		UserVerificationToken.update_all 'confirmed = true', ['user_id = ? and verification_type = ? and id != ?', self.user_id, self.verification_type, self.id ]
   	end 
 
   	def self.confirmed
@@ -26,7 +26,7 @@ class UserVerificationToken < ActiveRecord::Base
   	end
 
     def self.used?(token)
-      is_used = UserVerificationToken.where('confirmed = 1 and token = ?', token)
+      is_used = UserVerificationToken.where('confirmed = true and token = ?', token)
       return is_used.blank? ? false : true 
     end
 
@@ -36,12 +36,12 @@ class UserVerificationToken < ActiveRecord::Base
 
     def self.token_valid(token, type)
     	return unless token.present?
-    	token = UserVerificationToken.where("token = ? and verification_type = ? and created_at > ? and confirmed = 0", token, type, UserVerificationToken.expires).includes(:user).first
+    	token = UserVerificationToken.where("token = ? and verification_type = ? and created_at > ? and confirmed = false", token, type, UserVerificationToken.expires).includes(:user).first
     	user = token.user
     end
 
     def self.update_token(token, type)
-      UserVerificationToken.update_all 'confirmed = 1', ['token = ? and verification_type = ?', token, type]
+      UserVerificationToken.update_all 'confirmed = true', ['token = ? and verification_type = ?', token, type]
     end
 
 end

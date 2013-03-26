@@ -5,7 +5,7 @@ class CreateUserVerificationTokens < ActiveRecord::Migration
       t.string :email, :null => false
       t.string :token, :null => false
       t.string :verification_type, :null => false
-      t.boolean :confirmed, :default => 0
+      t.boolean :confirmed, :default => false
 
       t.timestamps
     end

@@ -5,11 +5,11 @@ gem 'bcrypt-ruby', '~> 3.0.0'
 gem 'faker', '1.0.1'
 gem 'jquery-rails'
 gem 'annotate'
+gem 'pg'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 group :development, :test do
-gem 'sqlite3'
 gem 'rspec-rails'
 end
 
@@ -33,9 +33,6 @@ group :test do
 	gem 'cucumber-rails', '1.2.1', :require => false
 	gem 'database_cleaner'
 
-end
-group :production do
-  gem 'pg'
 end
 
 # To use Jbuilder templates for JSON

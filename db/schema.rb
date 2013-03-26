@@ -23,8 +23,6 @@ ActiveRecord::Schema.define(:version => 20130313070424) do
     t.datetime "updated_at",                           :null => false
   end
 
-  add_index "user_verification_tokens", ["token"], :name => "index_user_verification_tokens_on_token", :unique => true
-
   create_table "users", :force => true do |t|
     t.string   "fullname"
     t.string   "username"
@@ -35,9 +33,5 @@ ActiveRecord::Schema.define(:version => 20130313070424) do
     t.string   "remember_token"
     t.boolean  "email_verified",  :default => false
   end
-
-  add_index "users", ["email"], :name => "index_users_on_email", :unique => true
-  add_index "users", ["remember_token"], :name => "index_users_on_remember_token"
-  add_index "users", ["username"], :name => "index_users_on_username", :unique => true
 
 end

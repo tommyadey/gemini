@@ -37,7 +37,7 @@ class User < ActiveRecord::Base
     UserMailer.signup_confirmation(token, self).deliver
   end
   def update_email_status
-    self.email_verified = 1
+    self.email_verified = true
     self.password = :password
     save!
   end

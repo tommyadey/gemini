@@ -26,7 +26,7 @@ class UserSettingsController < ApplicationController
 			redirect_to recover_password_path :notice => "Password reset has been used"
 		else
 			@user = UserVerificationToken.token_valid(token,"password")
-    		render 'reset_password' if @user
+    		render 'reset_password', :layout =>"signedout_layout" if @user
 		end
   	end
 	

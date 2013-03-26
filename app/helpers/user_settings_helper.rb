@@ -4,6 +4,6 @@ module UserSettingsHelper
 	end
 
 	def email_verified?
-		!session[:email_verified] == "false"
+		session[:email_verified]
 	end
 end

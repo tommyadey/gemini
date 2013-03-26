@@ -12,7 +12,7 @@ class UsersController < ApplicationController
 
   def new
     @user = User.new
-    render :layout => "landing_page"
+    render :layout => "signedout_layout"
   end
 
   def create
