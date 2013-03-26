@@ -54,5 +54,14 @@ module SessionsHelper
   def store_location
     session[:return_to] = request.url
   end
+  #nb you can also do render :layout => "layou_name" in the method
+  private
+    def home_layout
+      if signed_in?
+        "application"
+      else
+        "signedout_layout"
+      end
+    end
 
 end

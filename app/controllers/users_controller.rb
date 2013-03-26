@@ -12,6 +12,7 @@ class UsersController < ApplicationController
 
   def new
     @user = User.new
+    render :layout => "landing_page"
   end
 
   def create
@@ -29,7 +30,7 @@ class UsersController < ApplicationController
   end
 
   def recover_password
-    render 'recover_password'
+    render 'recover_password', :layout => "signedout_layout"
   end    
 
 

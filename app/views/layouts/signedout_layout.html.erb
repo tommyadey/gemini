@@ -17,14 +17,14 @@
     <div id="no-jscript">Brackt is heavily reliant on the use of Javascript for its usuability. Please enable javascript in your browser for full functionality.
     </div>
 </noscript>
-
+<%= link_to 'Sign In', signin_path %>
+<br>
+<%= link_to 'Sign up', signup_path %>
 <div class="container">
-  <%= render 'includes/header'%>
   <section class="content">
     <%= render 'includes/common/message_handler'%>
     <%= yield %>
   </section><!-- end section !-->
-  <%= render 'includes/footer'%>
 </div><!-- end container !-->
 
 </body>

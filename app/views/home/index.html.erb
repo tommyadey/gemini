@@ -1,4 +1,15 @@
 <%= provide(:title, 'Home Page') %>
-<h1> Welcome to a new gemini</h1>
-<p> Sigh, ths is going to be a shit load of work</p>
-<p> Though i hope this is the begining of an interesting journey</p>
+<div>
+	<h2> Hi <%= current_user.fullname%></h2>
+	<div class="feed-tab">
+		<ul>
+			<li> All Posts </li>
+			<li> All Brackts </li>
+			<li> Global </li>
+		</ul>
+	</div>
+</div>
+<div class="feed-container">
+	Feed Here..<br>
+	Feed Here..
+</div><!-- feed-container !-->

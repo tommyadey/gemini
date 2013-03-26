@@ -1,9 +1,7 @@
 <% provide(:title, 'Brackt - Sign In')%>
 
 <h1>Sign In</h1>
-
-
-    <div class="row">
+    <div class="">
       <div>
         <%= form_for(:session, url: sessions_path) do |f| %>
           <p>
@@ -20,12 +18,12 @@
               <%= f.check_box :remember_me %>
            </p>
            <p>
-            <%= link_to "Fogot Password?", recover_password_path %>
-           </p>
-           <p>
              <%= f.submit "Sign In", class: "btn-large" %>
            </p>
         <% end %>
+        <p>
+          <%= link_to "Fogot Password?", recover_password_path %>
+        </p>
         <p> New user? <%= link_to "Sign Up Here!", new_user_path %></p>
       </div>
     </div>

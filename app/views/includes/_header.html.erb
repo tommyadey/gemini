@@ -1,23 +1,44 @@
   <header>
-    <nav>
-      <ul>
-      <li><%= link_to 'HOME', root_path %></li>
-      <% if signed_in? %>
-            <li><%= link_to 'Network', '#' %></li>
-            <li><%= link_to 'Explore', '#' %></li>
-            <li><%= link_to 'Notifications', '#' %></li>
-            <li><%= link_to 'Users', users_path %></li>
-            <li><%= link_to 'Profile',  current_user %><li>
-            <li><%= link_to 'Settings',  settings_path %><li>
-            <li><%= link_to 'Sign Out', signout_path, method: 'delete' %><li>
-      <% else %>
-            <li><%= link_to 'Sign In', signin_path %><li>
-            <li><%= link_to 'Sign up', signup_path %></li>
-      <% end %>
+    <div class="header-container">
+      <nav>
+        <div class="logo-container">
+            <%= link_to 'LOGO HERE', root_path %>
+        </div><!-- end logo-container!-->
+        <div class="site-nav">
+          <ul>
+                  <li><%= link_to 'Networks', '#' %></li>
+                  <li><%= link_to 'Explore', '#' %></li>
+          </ul>
+        </div><!-- end site-nav!-->
+        <div class="nav-search">
+          <form>
+            <input type="text" placeholder="Search..."/>
+          </form>
 
-
-    </ul>
-    </nav><!-- end nav!-->
+        </div><!-- end nav-search!-->
+        <div class="user-menu">
+          <ul>
+            <li><%= link_to 'My Interactions', '#' %></li>
+            <li><%= link_to 'Me', '#' %>
+              <div class="user-dropdown">
+                <ul>
+                  <li><%= link_to 'Profile', current_user %></li>
+                  <li><%= link_to 'Settings',  settings_path %></li>
+                  <li><%= link_to 'My Brackts',  '#' %></li>
+                  <li><%= link_to 'My Outlooks', '#' %></li>
+                  <li><%= link_to 'Upgrade', '#' %></li>
+                  <li><%= link_to 'Support', '#' %></li>
+                  <li><%= link_to 'People', '#' %></li>
+                  <li><%= link_to 'Privacy', '#' %></li>
+                  <li><%= link_to 'Sign Out', signout_path, method: 'delete' %></li>
+                  <li><%= link_to 'Users',  users_path %></li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </div><!-- end user-menu !-->   
+      </nav><!-- end nav!-->
+  </div><!-- end header container !-->
 
 
   </header><!-- end header !-->
