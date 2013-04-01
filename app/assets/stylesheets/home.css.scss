@@ -1,3 +1,69 @@
 // Place all the styles related to the Home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+@import "includes";
+.sub-nav{
+	width: 960px;
+	margin: 0 auto;
+	a{
+		color:$default-text-color;
+	}
+	h2{		
+		float: left;
+		font-size: 20px;
+	}
+	.feed-tab {
+		ul li {
+			float: left;
+			list-style: none;
+			margin-left: 15px;
+			background-color:$white;
+			border: 1px solid #ebeae5;
+			padding: 5px;
+			a span{
+				width:0;
+				height:0;
+				border-left:5px solid transparent;
+				border-right:5px solid transparent;
+				border-top:5px solid $default-text-color;
+				display: inline-block;
+				margin: 2px 7px;
+			}
+			&:hover ul {
+				display:block;
+			}
+		}
+		.feed-type,
+		.brackt-type {
+			width: 100%;
+			ul{
+				display: none;
+				position: absolute;
+				margin: 0;
+				padding: 0;
+				
+			}
+			ul li{
+				float: none;
+			}
+
+			
+		}
+
+	
+	}
+	
+}
+.content {
+	margin: 0 auto;
+	width: 960px;
+	margin-top: 10px;
+}
+
+.feed-container{
+	float:left;
+	width: 630px;
+	background-color:$white;
+	height: 1024px;
+	margin-bottom: 10px;
+}

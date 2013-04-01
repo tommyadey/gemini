@@ -1,25 +1,29 @@
   <header>
-    <div class="header-container">
-      <nav>
+    <div class="global-nav cf">
+      <div class ="container">
+        <div class ="left-side">
         <div class="logo-container">
-            <%= link_to 'LOGO HERE', root_path %>
+            <%= link_to 'Brackt', root_path %>
+
         </div><!-- end logo-container!-->
-        <div class="site-nav">
-          <ul>
-                  <li><%= link_to 'Networks', '#' %></li>
-                  <li><%= link_to 'Explore', '#' %></li>
-          </ul>
-        </div><!-- end site-nav!-->
         <div class="nav-search">
           <form>
-            <input type="text" placeholder="Search..."/>
+            <input type="text" class="search-input"/>
           </form>
 
         </div><!-- end nav-search!-->
+        <div class="site-nav">
+          <ul>
+                  <li><%= link_to 'Networks', '#', class: "selected" %></li>
+                  <li><%= link_to 'Explore', '#' %></li>
+          </ul>
+        </div><!-- end site-nav!-->
+      </div><!-- end left-side !-->
+        
         <div class="user-menu">
           <ul>
-            <li><%= link_to 'My Interactions', '#' %></li>
-            <li><%= link_to 'Me', '#' %>
+            <li><%= link_to 'New', '#' %>
+            <li><%= link_to 'Me', '#' %>          
               <div class="user-dropdown">
                 <ul>
                   <li><%= link_to 'Profile', current_user %></li>
@@ -35,12 +39,9 @@
                 </ul>
               </div>
             </li>
+            <li><%= link_to 'Interactions', '#' %></li>
           </ul>
         </div><!-- end user-menu !-->   
-      </nav><!-- end nav!-->
-  </div><!-- end header container !-->
-
-
-  </header><!-- end header !-->
-  <hr/>
-  <hr/>
+      </div><!-- end container!-->
+  </div><!-- end global-nav !-->
+</header>
