@@ -6,3 +6,11 @@
 <p><%= @user.username %> </p><hr/>
 
 <p><%= @user.email %> </p>
+<hr>
+<hr>
+<ol>
+<% if @user.statuses.any? %>
+	<h3> Status (<%= @user.statuses.count %>) </h3>
+		<%= render @statuses %>
+<% end %>
+</ol>

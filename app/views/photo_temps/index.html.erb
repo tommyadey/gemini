@@ -1,0 +1,11 @@
+
+<%= provide(:title, 'All Photos') %>
+<h1> All Temp Images Uploaded as of yet. </h1>
+<ul id="photo-temps">
+  <%= pluralize(@photo_temps.count, "Photo") %>.
+  <%= render @photo_temps %>
+</ul>
+<%= form_for PhotoTemp.new do |f| %>
+  <%= f.label :photo_path, "Upload Photo:" %>
+  <%= f.file_field :photo_path, multiple: true, name: "photo_temp[photo_path]" %>
+<% end %>

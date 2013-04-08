@@ -13,6 +13,8 @@
 class User < ActiveRecord::Base
   attr_accessible :email, :fullname, :password, :username
   has_many :user_verification_tokens
+  has_many :statuses, dependent: :destroy
+  has_many :PhotoTemps, dependent: :destroy
   has_secure_password
   before_save { |user| user.email = email.downcase }
   before_save { |user| user.username = username.downcase }
@@ -40,6 +42,10 @@ class User < ActiveRecord::Base
     self.email_verified = true
     self.password = :password
     save!
+  end
+
+  def feed
+    Status.where("user_id = ?", id)
   end
 
   private

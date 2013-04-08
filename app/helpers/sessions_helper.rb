@@ -46,6 +46,10 @@ module SessionsHelper
     @current_user ||= User.find_by_remember_token(cookies[:remember_token]) if cookies[:remember_token]
   end
 
+  def current_user?(user)
+    return true if user.id === current_user.id
+  end
+
   def redirect_back_or(default)
     redirect_to(session[:return_to] || default)
     session.delete(:return_to)

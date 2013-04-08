@@ -1,0 +1,2 @@
+module PhotoTempsHelper
+end

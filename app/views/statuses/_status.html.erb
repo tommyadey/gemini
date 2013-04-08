@@ -1,0 +1,16 @@
+<li>
+	<%= status.inspect %>
+	<span> <%= status.status %> </span>
+	<span> <%= time_ago_in_words(status.created_at) %> ago. </span>
+	<span> <%= status.photo_path %> </span>
+	<% if status.photo_path.present? %>
+		<%= image_tag status.photo_path_url(:thumb).to_s %>
+	<% end %>
+	<% if current_user?(status.user) %>
+	<%= link_to "delete", status, method: :delete,
+										 data: { confirm: "Are you sure?" },
+										 title: status.status %>
+	<% end %>
+
+	<hr>
+</li>

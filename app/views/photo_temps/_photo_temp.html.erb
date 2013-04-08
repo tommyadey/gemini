@@ -1,0 +1,9 @@
+<hr>
+<li>
+      <li>ID : <%= photo_temp.id %></li>
+      <li>UID : <%= photo_temp.user_id %></li>
+      <li>PATH :    <%= photo_temp.photo_path %></li>
+      <li>DATE :    <%= photo_temp.created_at %></li>
+      <li> <%= image_tag photo_temp.photo_path_url(:thumb).to_s %></li>
+
+</li>

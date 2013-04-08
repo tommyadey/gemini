@@ -6,6 +6,8 @@ gem 'faker', '1.0.1'
 gem 'jquery-rails'
 gem 'annotate'
 gem 'pg'
+gem "rmagick"
+gem "carrierwave"
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
@@ -25,6 +27,8 @@ group :assets do
 
   gem 'uglifier', '>= 1.2.3'
   gem 'compass-rails'
+  gem 'jquery-fileupload-rails'
+  
 end
 
 group :test do

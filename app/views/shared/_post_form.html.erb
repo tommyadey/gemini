@@ -1,0 +1,8 @@
+<%= form_for @status, :html => {:multipart => true} do |f| %>
+	<%= render 'includes/common/form_errors', object: f.object %>
+	<%= f.text_area :status, placeholder: "Compose new status..." %>
+	<p>
+    <%= f.file_field :photo_path %>
+  </p> 
+	<%= f.submit "Post", class: "" %> 
+<% end %>

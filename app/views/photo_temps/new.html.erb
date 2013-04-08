@@ -1,0 +1,6 @@
+<%= form_for PhotoTemp.new, :html => {:multipart => true} do |f| %>
+  <p>
+    <%= f.file_field :photo_path %>
+  </p>
+  <p><%= f.submit %></p>
+<% end %>
