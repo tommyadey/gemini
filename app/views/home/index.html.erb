@@ -1,14 +1,25 @@
 <%= provide(:title, 'Home Page') %>
+<!--
 <%= render 'includes/home_subnav'%>
+!-->
 <section class="content">
-<div class="feed-container">
-	<div>
-		<%= render 'shared/post_form' %>
-	</div>
-	<div>
-		<h3> Feed </h3>
-		<%= render 'shared/feed' %>
-	</div>
+<div class="grid_8 feed-container">
+	<div class="feed">
+		<div class="feed-header">
+		<div style="padding: 15px 0px 0px 30px;">
+			<h1 style="font-size: 18px;"> All Posts From All Brackts </h1>
+		</div>
+		</div><!-- end feed-header!-->
+		<!-- <div>
+			<%= render 'shared/post_form' %>
+		</div> !-->
+		<div>
+			<%= render 'shared/feed' %>
+		</div>
+	</div><!-- end feeds !-->
 </div><!-- feed-container !-->
+<div class="grid_4 guide">
+	<%= render "guide" %>
+</div>
 </section><!-- end section !-->
 <div style="clear:both"></div>

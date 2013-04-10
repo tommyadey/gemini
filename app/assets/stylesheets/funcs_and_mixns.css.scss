@@ -1,0 +1,9 @@
+@function border_color($color: white) {
+	@return desaturate(darken($color, 25%), 50%);
+}
+
+@mixin colored_box($color: white) {
+	@extend .flash-message;;
+	background-color: $color;
+	border-color: bordr_color($color);
+}

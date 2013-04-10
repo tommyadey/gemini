@@ -5,7 +5,7 @@ class CreateStatuses < ActiveRecord::Migration
       t.string :status
       t.integer :photo_id, :default => 0
       t.integer :branched_id, :default => 0
-      t.boolean :global :default => false
+      t.boolean :global, :default => false
       t.boolean :all_brackts, :default => false
 
       t.timestamps

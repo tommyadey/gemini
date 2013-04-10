@@ -1,5 +1,6 @@
 @import "colors";
-
+@import "funcs_and_mixns";
+/* compass mixin tut */
 body {
 	font-size: 14px;
 	font-family: "Helvetica Neue", Helvetica, Arail, sans serif;
@@ -27,16 +28,11 @@ a{
 }
 
 .success {
-	@extend .flash-message;
-	$flash-message-green: green !default;
-	background-color: $flash-message-green;
-	border-color:green;
+	@include colored_box($flash-message-green);
 }
 
 .error {
-	@extend .flash-message;
-	background-color: $flash-message-red;
-	border-color: red;
+	@include colored_box($flash-message-red);
 }
 
 .cf::before,
